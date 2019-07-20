@@ -17,4 +17,14 @@ public class TestCode {
 				);
 		assertEquals(result, Main.reformator(dateList));
 	}
+	@Test
+	public void testFormatorSorted() {
+		List<String> dateList = Arrays.asList("2018-05-14","1754-12-31","2014-06-28");
+		List<String> result = Arrays.asList(
+				"31 декабря 1754 вторник"
+				,"28 июня 2014 суббота",
+				"14 мая 2018 понедельник"
+				);
+		assertEquals(result, Main.sortReformator(dateList));
+	}
 }
